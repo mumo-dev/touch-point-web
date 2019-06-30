@@ -20,7 +20,24 @@ class IdentificationController extends Controller
     public function storeContract(Request $request)
     {
         // $ymd = DateTime::createFromFormat('Y-m-d', '10-16-2003')->format('Y-m-d');
-        $contract = Contract::create($request->all());
+        $contract = Contract::create([
+            'commercial_name'=>$request->commercial_name,
+            'dob'=>$request->dob,
+            'place_of_birth'=>$request->place_of_birth,
+            'corporate_name'=>$request->corporate_name,
+            'name_and_position_ccr'=>$request->name_and_position_ccr,
+            'type_and_number_of_id'=>$request->type_and_number_of_id,
+            'address'=>$request->address,
+            'business_name'=>$request->business_name,
+            'pin_number'=>$request->pin_number,
+            'reg_no_of_business'=>$request->reg_no_of_business,
+            'phone'=>$request->phone,
+            'email'=>$request->email,
+            'date'=>$request->date,
+            'name'=>$request->name,
+            'user_id'=>$request->user_id
+        ]);
+
 
         return response()->json([
             'id' => $contract->id,
@@ -29,7 +46,12 @@ class IdentificationController extends Controller
 
 
 
+
+
     }
+
+
+
 
 
     public function storeContractImage(Request $request)
