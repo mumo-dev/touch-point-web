@@ -20,9 +20,10 @@ class IdentificationController extends Controller
     public function storeContract(Request $request)
     {
         // $ymd = DateTime::createFromFormat('Y-m-d', '10-16-2003')->format('Y-m-d');
-        Contract::create($request->all());
+        $contract = Contract::create($request->all());
 
         return response()->json([
+            'id' => $contract->id,
             'message'=>'successfully created'
         ]);
 
@@ -52,8 +53,9 @@ class IdentificationController extends Controller
 
     public function storeIdentification(Request $request)
     {
-        Identification::create($request->all());
+        $ident =Identification::create($request->all());
         return response()->json([
+            'id'=> $ident->id,
             'message'=>'successfully created'
         ]);
     }

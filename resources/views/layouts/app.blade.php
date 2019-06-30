@@ -46,7 +46,9 @@
 
                         @else
 
-
+                            <li class="nav-item">
+                                <a class="nav-link" href="/home">{{ __('Home') }}</a>
+                            </li>
 
                             <li class="nav-item">
                                 <a class="nav-link" href="/register-agent">{{ __('Register Agent') }}</a>
