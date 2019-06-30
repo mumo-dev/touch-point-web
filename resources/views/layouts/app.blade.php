@@ -47,7 +47,11 @@
                         @else
 
                             <li class="nav-item">
-                                <a class="nav-link" href="/home">{{ __('Home') }}</a>
+                                <a class="nav-link" href="/home">{{ __('Identification Forms') }}</a>
+                            </li>
+
+                            <li class="nav-item">
+                                    <a class="nav-link" href="/contracts">{{ __('Contract Forms') }}</a>
                             </li>
 
                             <li class="nav-item">

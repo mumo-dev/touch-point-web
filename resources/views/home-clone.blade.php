@@ -13,10 +13,10 @@
 
             <div class="list-group">
                     <a href="#" class="list-group-item list-group-item-action active">
-                        List of Submitted Identification forms
+                        List of Submitted Contract forms
                     </a>
-                    @forelse($identifications as $identification)
-                   <a href="/home/{{$identification->id}}" class="list-group-item list-group-item-action">
+                    @forelse($contracts as $identification)
+                   <a href="/contracts/{{$identification->id}}" class="list-group-item list-group-item-action">
                          submitted by {{ $identification->user->name}} on
                        {{ $identification->created_at->toDayDateTimeString()}}
                     </a>

@@ -21,6 +21,9 @@ Auth::routes();
 
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home/{id}','HomeController@showIdentification');
+Route::get('/contracts','HomeController@contracts');
+Route::get('/contracts/{id}','HomeController@showContract');
 
 Route::get('/register-agent', 'AdminController@showForm');
 Route::post('/register-agent', 'AdminController@create');
