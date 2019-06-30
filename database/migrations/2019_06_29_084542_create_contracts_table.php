@@ -30,7 +30,7 @@ class CreateContractsTable extends Migration
 
             $table->date('date');
             $table->string('name');
-            $table->string('signature_url');
+            $table->string('signature_url')->nullable();
 
             $table->unsignedBigInteger('user_id');
             $table->timestamps();

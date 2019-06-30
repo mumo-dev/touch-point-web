@@ -40,6 +40,7 @@ class CreateIdentificationsTable extends Migration
             $table->string('device_imei');
             $table->string('device_serial_no');
 
+            $table->string('surface_room');
             $table->string('products_type');
             $table->string('core_business');
             $table->string('secondary_activity');
@@ -53,7 +54,7 @@ class CreateIdentificationsTable extends Migration
             $table->string('payment_amount');
             $table->string('payment_goods_refno');
 
-            $table->string('image_url');
+            $table->string('image_url')->nullable();
             $table->string('topology_of_point');
 
 

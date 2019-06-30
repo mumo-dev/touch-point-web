@@ -19,14 +19,8 @@ class IdentificationController extends Controller
 
     public function storeContract(Request $request)
     {
-        $destinationPath = public_path('/images');
-        $image = $request->file('image');
-        $imagename = uniqid(). '.' . $image->getClientOriginalExtension();
-
-        $image->move($destinationPath, $imagename);
         // $ymd = DateTime::createFromFormat('Y-m-d', '10-16-2003')->format('Y-m-d');
-        Contract::create(array_merge($request->except('image'), ['signature_url'=>$imagename]));
-
+        Contract::create($request->all());
 
         return response()->json([
             'message'=>'successfully created'
@@ -36,7 +30,8 @@ class IdentificationController extends Controller
 
     }
 
-    public function storeIdentification(Request $request)
+
+    public function storeContractImage(Request $request)
     {
 
         $destinationPath = public_path('/images');
@@ -44,7 +39,36 @@ class IdentificationController extends Controller
         $imagename = uniqid(). '.' . $image->getClientOriginalExtension();
 
         $image->move($destinationPath, $imagename);
-        Identification::create(array_merge($request->except('image'), ['image_url'=>$imagename]));
+
+        $contract =  Contract::find($request->id);
+        $contract->update(['signature_url'=>$imagename]);
+
+        return response()->json([
+            'message'=>'successfully created'
+        ]);
+
+
+    }
+
+    public function storeIdentification(Request $request)
+    {
+        Identification::create($request->all());
+        return response()->json([
+            'message'=>'successfully created'
+        ]);
+    }
+
+
+    public function storeIdentificationImage(Request $request)
+    {
+        $destinationPath = public_path('/images');
+        $image = $request->file('image');
+        $imagename = uniqid(). '.' . $image->getClientOriginalExtension();
+
+        $image->move($destinationPath, $imagename);
+
+        $identification =  Identification::find($request->id);
+        $identification->update(['signature_url'=>$imagename]);
 
         return response()->json([
             'message'=>'successfully created'

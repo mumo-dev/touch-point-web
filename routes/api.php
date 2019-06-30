@@ -35,5 +35,7 @@ Route::group([
 Route::group(['middleware' => 'jwt.auth'], function ($router) {
 
     Route::post('/store-contracts', 'IdentificationController@storeContract');
+    Route::post('/upload/contract-image', 'IdentificationController@storeContractImage');
     Route::post('/store-identification', 'IdentificationController@storeIdentification');
+    Route::post('/upload/identification-image', 'IdentificationController@storeIdentificationImage');
 });
