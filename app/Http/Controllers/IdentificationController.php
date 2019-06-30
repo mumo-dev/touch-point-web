@@ -119,7 +119,7 @@ class IdentificationController extends Controller
         $image->move($destinationPath, $imagename);
 
         $identification =  Identification::find($request->id);
-        $identification->update(['signature_url'=>$imagename]);
+        $identification->update(['image_url'=>$imagename]);
 
         return response()->json([
             'message'=>'successfully created'
@@ -127,5 +127,5 @@ class IdentificationController extends Controller
     }
 
 
-    
+
 }
