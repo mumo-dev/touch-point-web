@@ -44,11 +44,7 @@ class IdentificationController extends Controller
             'message'=>'successfully created'
         ]);
 
-
-
     }
-
-
 
     public function storeContractImage(Request $request)
     {
@@ -129,4 +125,7 @@ class IdentificationController extends Controller
             'message'=>'successfully created'
         ]);
     }
+
+
+    
 }
