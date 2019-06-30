@@ -126,6 +126,17 @@ class IdentificationController extends Controller
         ]);
     }
 
+    public function getContracts($id)
+    {
+       $contracts =  Contract::where('user_id', $id)->latest()->get();
+       return response()->json($contracts);
+    }
 
+
+    public function getIdentifications($id)
+    {
+        $contracts =  Identification::where('user_id', $id)->latest()->get();
+        return response()->json($contracts);
+    }
 
 }

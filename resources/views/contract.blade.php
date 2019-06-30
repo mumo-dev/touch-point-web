@@ -73,7 +73,7 @@
                                 </tr>
                                 <tr>
                                         <td>Email address of Business / Company:</td>
-                                        <td>   {{ $contract->phone}}</td>
+                                        <td>   {{ $contract->email}}</td>
                                 </tr>
                                 <tr>
                                         <th>Date:</th>
@@ -83,7 +83,7 @@
                                         <th> Name: </th>
                                         <td>   {{ $contract->name}}</td>
                                 </tr>
-                               
+
                                 <tr>
                                  <th> Signature: </th>
 
