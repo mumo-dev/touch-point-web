@@ -13,11 +13,9 @@
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('welcome');
 
 Auth::routes();
-
-
 
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -27,3 +25,8 @@ Route::get('/contracts/{id}','HomeController@showContract');
 
 Route::get('/register-agent', 'AdminController@showForm');
 Route::post('/register-agent', 'AdminController@create');
+
+Route::group(['prefix'=>'supervisor','middleware'=>['auth', 'supervisor']], function(){
+    Route::get('/', 'SupervisorController@index')->name('supervisor.home');
+});
+
