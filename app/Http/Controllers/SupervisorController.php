@@ -5,13 +5,34 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
 use App\User;
+use App\Identification;
+use App\Contract;
 class SupervisorController extends Controller
 {
 
 
     public function index()
     {
-        return view('supervisor.index');
+        $identifications = Identification::all();
+        return view('supervisor.index', compact('identifications'));
+    }
+
+    public function showIdentification($id)
+    {
+        $identification = Identification::findOrFail($id);
+        return view('supervisor.identification', compact('identification'));
+    }
+
+    public function contracts()
+    {
+        $contracts = Contract::all();
+        return view('supervisor.all-contracts', compact('contracts'));
+    }
+
+    public function showContract($id)
+    {
+        $contract = Contract::findOrFail($id);
+        return view('supervisor.contract', compact('contract'));
     }
 
     public function showForm()

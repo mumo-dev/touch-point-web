@@ -44,5 +44,9 @@ Route::group(['prefix'=>'supervisor','middleware'=>['auth', 'supervisor']], func
     Route::post('/register-agent', 'SupervisorController@create')->name('register.agent');
     Route::get('/agents', 'SupervisorController@showAgents')->name('agents');
     Route::post('/delete-agent', 'SupervisorController@deleteAgent')->name('agent.delete');
+
+    Route::get('/identification/{id}','SupervisorController@showIdentification');
+    Route::get('/contracts','SupervisorController@contracts')->name('supervisor.contracts');
+    Route::get('/contracts/{id}','SupervisorController@showContract');
 });
 

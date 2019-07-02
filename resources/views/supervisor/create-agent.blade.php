@@ -25,11 +25,11 @@
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="#">
-          <span data-feather="bar-chart-2"></span>
-          Contracts
+        <a class="nav-link" href="{{ route('supervisor.contracts')}}">
+            <span data-feather="bar-chart-2"></span>
+            Contracts
         </a>
-      </li>
+    </li>
 
     </ul>
 

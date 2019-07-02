@@ -18,16 +18,16 @@
 
     <ul class="nav flex-column mb-2">
       <li class="nav-item">
-            <a class="nav-link active" href="{{ route('supervisor.home')}}">
+            <a class="nav-link" href="{{ route('supervisor.home')}}">
           <span data-feather="home"></span>
             Identifications <span class="sr-only">(current)</span>
         </a>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="{{ route('supervisor.contracts')}}">
-            <span data-feather="bar-chart-2"></span>
-            Contracts
+         <a class="nav-link active" href="{{ route('supervisor.contracts')}}">
+          <span data-feather="bar-chart-2"></span>
+          Contracts
         </a>
       </li>
 
@@ -63,26 +63,27 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-12">
-                @if (session('message'))
+        <div class="col-md-8">
+                @if (session('status'))
                 <div class="alert alert-success" role="alert">
-                    {{ session('message') }}
+                    {{ session('status') }}
                 </div>
             @endif
 
 
             <div class="list-group">
-                <a href="#" class="list-group-item list-group-item-action active">
-                    List of Submitted Identification forms
-                </a>
-                @forelse($identifications as $identification)
-                <a href="/supervisor/identification/{{$identification->id}}" class="list-group-item list-group-item-action">
-                        submitted by {{ $identification->user->name}} on
-                    {{ $identification->created_at->toDayDateTimeString()}}
-                </a>
-                @empty
-                    <a href="#" class="list-group-item list-group-item-action">No forms submitted yet</a>
-                @endforelse
+                    <a href="#" class="list-group-item list-group-item-action active">
+                        List of Submitted Contract forms
+                    </a>
+                    @forelse($contracts as $identification)
+                   <a href="/supervisor/contracts/{{$identification->id}}" class="list-group-item list-group-item-action">
+                         submitted by {{ $identification->user->name}} on
+                       {{ $identification->created_at->toDayDateTimeString()}}
+                    </a>
+                    @empty
+                        <a href="#" class="list-group-item list-group-item-action">No forms submitted yet</a>
+                    @endforelse
+
 
             </div>
         </div>
