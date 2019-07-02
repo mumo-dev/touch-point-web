@@ -76,6 +76,8 @@
                 <div class="card-header">
                     TOUCH POINT LICENSE AGREEMENT FOR THE USE OF GUICHET UNIQUE LIMITED’S
                         MULTIMODAL PLATFORM
+
+                    <a class="btn btn-primary btn-sm float-right" href="/contract/download/{{$contract->id}}">Print</a>
                 </div>
                 <div class="card-body">
 
@@ -148,7 +150,7 @@
                                 </tr>
                                 <tr>
                                     <td colspan="2">
-                                        <img src="/images/{{ $contract->signature_url}}" class="img-responsive"/>
+                                        <img src="/images/{{ $contract->signature_url}}" height="50px"/>
                                     </td>
                                 </tr>
                             </tbody>

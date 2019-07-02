@@ -46,6 +46,7 @@ class SupervisorController extends Controller
     {
         $this->validate($request,[
             'name' => 'required|string|max:255',
+            'phone' => 'required|string|max:15',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:8|confirmed'
         ]);
@@ -53,6 +54,7 @@ class SupervisorController extends Controller
         User::create([
             'name' =>$request->name,
             'email' => $request->email,
+            'phone' => $request->phone,
             'password' => Hash::make($request->password),
         ]);
 

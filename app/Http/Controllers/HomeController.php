@@ -64,12 +64,14 @@ class HomeController extends Controller
         $this->validate($request,[
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
+            'phone' => 'required|string|max:15',
             'password' => 'required|string|min:8|confirmed'
         ]);
 
         User::create([
             'name' =>$request->name,
             'email' => $request->email,
+            'phone' => $request->phone,
             'password' => Hash::make($request->password),
             'user_type'=>2
         ]);
@@ -91,5 +93,20 @@ class HomeController extends Controller
         $user->delete();
 
         return redirect()->back()->withMessage('Supervisor deleted successfully');
+    }
+
+
+
+    public function identificationDownload($id)
+    {
+        $identification = Identification::findOrFail($id);
+        return view('identification', compact('identification'));
+    }
+
+
+    public function contractDownload($id)
+    {
+        $contract = Contract::findOrFail($id);
+        return view('contract', compact('contract'));
     }
 }

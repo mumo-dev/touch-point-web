@@ -15,6 +15,9 @@ Route::get('/', function () {
     return view('welcome');
 })->name('welcome');
 
+Route::get('/identification/download/{id}', 'HomeController@identificationDownload');
+Route::get('/contract/download/{id}', 'HomeController@contractDownload');
+
 Auth::routes();
 
 

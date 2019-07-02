@@ -75,12 +75,13 @@
   <div class="card-header bg-white"> List of Agents</div>
   <div class="card-body">
       <div class="table-responsive">
-            <table class="table  table-sm">
+            <table id="datatable" class="table  table-sm">
               <thead>
                 <tr>
                   <th>#</th>
                   <th>Name</th>
                   <th>Email</th>
+                  <th>Phone</th>
                   <th>Delete</th>
                 </tr>
               </thead>
@@ -91,6 +92,7 @@
                     <td>{{$user->id}}</td>
                     <td>{{$user->name}}</td>
                     <td>{{$user->email}}</td>
+                    <td>{{$user->phone}}</td>
 
                     <td>
                         <button class="btn btn-sm btn-danger"  onclick="deleteAgent('{{$user->id}}')"

@@ -19,13 +19,15 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-     <link href="{{ asset('css/dashboard.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/dashboard.css') }}" rel="stylesheet">
+
+    <link href="{{ asset('css/dataTables.bootstrap4.min.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
 
 
-    <nav class="navbar navbar-dark fixed-top bg-success flex-md-nowrap p-0 shadow" >
+    <nav class="navbar navbar-dark fixed-top bg-primary flex-md-nowrap p-0 shadow" >
       <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">InTouch
       </a>
          @yield('header-title')
@@ -63,9 +65,19 @@
    <script src="{{ asset('js/app.js') }}"></script>
   <!-- Icons -->
     <script src="{{ asset('js/feather.min.js') }}"></script>
+
+    <script src="{{ asset('/js/jquery.dataTables.min.js') }}"></script>
+    <script src="{{ asset('dataTables.bootstrap4.min.js') }}"></script>
+
     <script>
       feather.replace()
+
+      $(document).ready(function() {
+        $('#datatable').DataTable();
+    });
     </script>
+
+
 
 
 

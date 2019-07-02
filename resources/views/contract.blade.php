@@ -1,67 +1,14 @@
-@extends('admin.layouts.app')
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-@section('header-title')
-    <h6 class="text-white text-uppercase">Admin Dashboard</h6>
-@endsection
-
-@section('sidebar')
-
-<nav class="col-md-2 d-none d-md-block bg-light sidebar">
-  <div class="sidebar-sticky">
-
-    <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-        <span>Reports</span>
-        <a class="d-flex align-items-center text-muted" href="#">
-            <span data-feather="plus-circle"></span>
-        </a>
-    </h6>
-
-    <ul class="nav flex-column mb-2">
-      <li class="nav-item">
-            <a class="nav-link" href="{{ route('admin.home')}}">
-          <span data-feather="home"></span>
-            Identifications <span class="sr-only">(current)</span>
-        </a>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link active" href="{{ route('admin.contracts')}}">
-          <span data-feather="bar-chart-2"></span>
-          Contracts
-        </a>
-      </li>
-
-    </ul>
-
-
-
-    <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-      <span>Manage Accounts</span>
-      <a class="d-flex align-items-center text-muted" href="#">
-        <span data-feather="plus-circle"></span>
-      </a>
-    </h6>
-    <ul class="nav flex-column mb-2">
-        <li class="nav-item">
-            <a class="nav-link" href="{{ route('supervisors')}}">
-            <span data-feather="layers"></span>
-            View Supervisors
-            </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="{{ route('supervisor.create')}}">
-            <span data-feather="plus-square"></span>
-            Create Supervisor
-            </a>
-        </li>
-
-    </ul>
-  </div>
-</nav>
-@endsection
-
-
-@section('content')
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <title>InTouch</title>
+</head>
+<body onload="window.print()">
 
 <div class="container">
     <div class="row justify-content-center">
@@ -77,8 +24,6 @@
                 <div class="card-header">
                     TOUCH POINT LICENSE AGREEMENT FOR THE USE OF GUICHET UNIQUE LIMITED’S
                         MULTIMODAL PLATFORM
-
-                <a class="btn btn-primary btn-sm float-right" href="/contract/download/{{$contract->id}}">Print</a>
                 </div>
                 <div class="card-body">
 
@@ -151,7 +96,7 @@
                                 </tr>
                                 <tr>
                                     <td colspan="2">
-                                        <img src="/images/{{ $contract->signature_url}}" height="50px"/>
+                                        <img src="/images/{{ $contract->signature_url}}" class="img-responsive"/>
                                     </td>
                                 </tr>
                             </tbody>
@@ -163,5 +108,4 @@
         </div>
     </div>
 </div>
-@endsection
-
+</body>
