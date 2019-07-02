@@ -42,20 +42,20 @@
       </a>
     </h6>
     <ul class="nav flex-column mb-2">
-      <li class="nav-item">
-        <a class="nav-link" href="#">
-          <span data-feather="layers"></span>
-          View Supervisors
-        </a>
-      </li>
-      <li class="nav-item">
-         <a class="nav-link" href="#">
-          <span data-feather="plus-square"></span>
-          Create Supervisor
-        </a>
-      </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{ route('supervisors')}}">
+            <span data-feather="layers"></span>
+            View Supervisors
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{ route('supervisor.create')}}">
+            <span data-feather="plus-square"></span>
+            Create Supervisor
+            </a>
+        </li>
 
-    </ul>
+        </ul>
   </div>
 </nav>
 @endsection

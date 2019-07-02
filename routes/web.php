@@ -29,6 +29,12 @@ Route::group(['prefix' => 'admin', 'middleware'=>['auth', 'admin']], function ()
     Route::get('/contracts','HomeController@contracts')->name('admin.contracts');
     Route::get('/contracts/{id}','HomeController@showContract');
 
+    Route::get('/register-supervisor', 'HomeController@showForm')->name('supervisor.create');
+    Route::post('/register-supervisors', 'HomeController@create')->name('register.supervisor');
+    Route::get('/supervisors', 'HomeController@showSupervisors')->name('supervisors');
+    Route::post('/delete-supervisor', 'HomeController@deleteSupervisor')->name('supervisor.delete');
+
+
 });
 
 

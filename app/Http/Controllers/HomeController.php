@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 use App\Identification;
 use App\Contract;
+use App\User;
 
 class HomeController extends Controller
 {
@@ -46,5 +48,48 @@ class HomeController extends Controller
     {
         $contract = Contract::findOrFail($id);
         return view('admin.contract', compact('contract'));
+    }
+
+
+
+    public function showForm()
+    {
+
+        return view('admin.create-supervisor');
+    }
+
+
+    public function create(Request $request)
+    {
+        $this->validate($request,[
+            'name' => 'required|string|max:255',
+            'email' => 'required|string|email|max:255|unique:users',
+            'password' => 'required|string|min:8|confirmed'
+        ]);
+
+        User::create([
+            'name' =>$request->name,
+            'email' => $request->email,
+            'password' => Hash::make($request->password),
+            'user_type'=>2
+        ]);
+
+       return redirect()->back()->withMessage('Supervisor created successfully');
+
+    }
+
+
+    public function showSupervisors()
+    {
+        $users = User::where('user_type', 2)->get();
+        return view('admin.supervisors', compact('users'));
+    }
+
+    public function deleteSupervisor(Request $request)
+    {
+        $user = User::find($request->id);
+        $user->delete();
+
+        return redirect()->back()->withMessage('Supervisor deleted successfully');
     }
 }
