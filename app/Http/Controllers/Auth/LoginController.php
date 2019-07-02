@@ -40,7 +40,7 @@ class LoginController extends Controller
             return '/supervisor';
         } else if(auth()->user()->user_type == 1){
             //admin
-            return '/home';
+            return '/admin';
         }else {
             //agent
             return '/';

@@ -25,26 +25,26 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $identifications = Identification::all();
-        return view('home', compact('identifications'));
+         $identifications = Identification::all();
+        return view('admin.index', compact('identifications'));
     }
 
 
     public function showIdentification($id)
     {
         $identification = Identification::findOrFail($id);
-        return view('ident', compact('identification'));
+        return view('admin.identification', compact('identification'));
     }
 
     public function contracts()
     {
         $contracts = Contract::all();
-        return view('home-clone', compact('contracts'));
+        return view('admin.all-contracts', compact('contracts'));
     }
 
     public function showContract($id)
     {
         $contract = Contract::findOrFail($id);
-        return view('contract', compact('contract'));
+        return view('admin.contract', compact('contract'));
     }
 }

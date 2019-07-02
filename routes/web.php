@@ -18,11 +18,18 @@ Route::get('/', function () {
 Auth::routes();
 
 
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/home/{id}','HomeController@showIdentification');
 Route::get('/contracts','HomeController@contracts');
 Route::get('/contracts/{id}','HomeController@showContract');
 
+Route::group(['prefix' => 'admin', 'middleware'=>['auth', 'admin']], function () {
+    Route::get('/', 'HomeController@index')->name('admin.home');
+    Route::get('/identification/{id}','HomeController@showIdentification');
+    Route::get('/contracts','HomeController@contracts')->name('admin.contracts');
+    Route::get('/contracts/{id}','HomeController@showContract');
+
+});
 
 
 Route::group(['prefix'=>'supervisor','middleware'=>['auth', 'supervisor']], function(){
