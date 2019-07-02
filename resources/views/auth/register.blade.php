@@ -1,9 +1,9 @@
-@extends('layouts.app')
+@extends('supervisor.layouts.app')
 
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-12">
             @if (session('message'))
                 <div class="alert alert-success" role="alert">
                     {{ session('message') }}
@@ -13,7 +13,7 @@
                 <div class="card-header">{{ __('Register Agent') }}</div>
 
                 <div class="card-body">
-                    <form method="POST" action="/register-agent">
+                    <form method="POST" action="/supervisor/register-agent">
                         @csrf
 
                         <div class="form-group row">

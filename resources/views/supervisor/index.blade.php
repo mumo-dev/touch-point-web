@@ -18,7 +18,7 @@
 
     <ul class="nav flex-column mb-2">
       <li class="nav-item">
-        <a class="nav-link active" href="#">
+            <a class="nav-link active" href="{{ route('supervisor.home')}}">
           <span data-feather="home"></span>
             Identifications <span class="sr-only">(current)</span>
         </a>
@@ -43,13 +43,13 @@
     </h6>
     <ul class="nav flex-column mb-2">
       <li class="nav-item">
-        <a class="nav-link " href="#">
+        <a class="nav-link" href="{{ route('agents')}}">
           <span data-feather="layers"></span>
           View Agents
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">
+         <a class="nav-link" href="{{route('create.agent')}}">
           <span data-feather="plus-square"></span>
           Create Agent
         </a>

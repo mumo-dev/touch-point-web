@@ -23,10 +23,13 @@ Route::get('/home/{id}','HomeController@showIdentification');
 Route::get('/contracts','HomeController@contracts');
 Route::get('/contracts/{id}','HomeController@showContract');
 
-Route::get('/register-agent', 'AdminController@showForm');
-Route::post('/register-agent', 'AdminController@create');
+
 
 Route::group(['prefix'=>'supervisor','middleware'=>['auth', 'supervisor']], function(){
     Route::get('/', 'SupervisorController@index')->name('supervisor.home');
+    Route::get('/register-agent', 'SupervisorController@showForm')->name('create.agent');
+    Route::post('/register-agent', 'SupervisorController@create')->name('register.agent');
+    Route::get('/agents', 'SupervisorController@showAgents')->name('agents');
+    Route::post('/delete-agent', 'SupervisorController@deleteAgent')->name('agent.delete');
 });
 
