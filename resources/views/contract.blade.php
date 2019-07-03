@@ -36,10 +36,7 @@
 
                                 </tr>
 
-                                <tr>
-                                    <td>Date and place of birth:  </td>
-                                    <td>{{$contract->dob}} - {{ $contract->place_of_birth}}</td>
-                                </tr>
+
 
                                 <tr>
                                     <td>Corporate name:  </td>
@@ -96,7 +93,7 @@
                                 </tr>
                                 <tr>
                                     <td colspan="2">
-                                        <img src="/images/{{ $contract->signature_url}}" class="img-responsive"/>
+                                        <img src="/images/{{ $contract->signature_url}}" height="50px">
                                     </td>
                                 </tr>
                             </tbody>

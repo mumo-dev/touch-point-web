@@ -90,10 +90,7 @@
 
                                 </tr>
 
-                                <tr>
-                                    <td>Date and place of birth:  </td>
-                                    <td>{{$contract->dob}} - {{ $contract->place_of_birth}}</td>
-                                </tr>
+                            
 
                                 <tr>
                                     <td>Corporate name:  </td>

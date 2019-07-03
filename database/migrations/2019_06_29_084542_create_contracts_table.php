@@ -17,7 +17,6 @@ class CreateContractsTable extends Migration
             $table->bigIncrements('id');
             $table->string('commercial_name');
             $table->date('dob');
-            $table->string('place_of_birth');
             $table->string('corporate_name');
             $table->string('name_and_position_ccr');
             $table->string('type_and_number_of_id');

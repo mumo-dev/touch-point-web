@@ -23,7 +23,6 @@ class IdentificationController extends Controller
         $contract = Contract::create([
             'commercial_name'=>$request->commercial_name,
             'dob'=>$request->dob,
-            'place_of_birth'=>$request->place_of_birth,
             'corporate_name'=>$request->corporate_name,
             'name_and_position_ccr'=>$request->name_and_position_ccr,
             'type_and_number_of_id'=>$request->type_and_number_of_id,
