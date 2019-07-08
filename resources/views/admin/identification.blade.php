@@ -228,15 +228,21 @@
 
                                 </tr>
                                 <tr>
-                                    <td colspan="5">
-                                        <img src="/images/{{ $identification->image_url}}" height="200px"/>
+                                    <td colspan="3">
+                                        <img src="/images/{{ $identification->front_image_url}}" height="200px"/>
+                                    </td>
+                                    <td colspan="3">
+                                            <img src="/images/{{ $identification->back_image_url}}" height="200px"/>
                                     </td>
                                 </tr>
                             </tbody>
                     </table>
 
-
+                    <div class="">
+                            <img src="/images/logo.jpg" height="70px">
+                    </div>
                 </div>
+
             </div>
         </div>
     </div>

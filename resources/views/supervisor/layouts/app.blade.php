@@ -22,6 +22,16 @@
      <link href="{{ asset('css/dashboard.css') }}" rel="stylesheet">
      <link href="{{ asset('css/dataTables.bootstrap4.min.css') }}" rel="stylesheet">
 
+     <style>
+         
+        .logo-bg {
+            background-image:url('/images/logo.jpg');
+            background-repeat:no-repeat;
+            background-position:center
+        }
+
+    </style>
+
 </head>
 <body>
     <div id="app">
