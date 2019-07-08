@@ -25,7 +25,7 @@
                 <div class="card-body">
 
 
-                    <table class="table table-sm">
+                    <table class="table table-sm" style="margin-top:20px;">
                             <tbody>
                                 <tr>
                                     <td>1.	Name of Sale Agent: </td>
@@ -34,11 +34,12 @@
                                 </tr>
 
                                 <tr>
-                                    <td>   Zone: </td>
-                                    <td>  {{ $identification->salesagent_zone}}</td>
-
-                                    <td>   Telephone: </td>
-                                    <td>  {{ $identification->salesagent_phone}}</td>
+                                    <td>   Zone:  </td>
+                                    <td>{{ $identification->salesagent_zone}}  </td>
+                                </tr>
+                                <tr>
+                                    <td>   Telephone:  </td>
+                                    <td> {{ $identification->salesagent_phone}}</td>
                                 </tr>
 
                                 <tr>
@@ -71,94 +72,94 @@
                                     <td>   {{ $identification->kra_pin}}</td>
                                 </tr>
                                 <tr>
-                                    <td colspan="2">8.	Name and Surname of Supervisor </td>
+                                    <td>8.	Name and Surname of Supervisor </td>
                                     <td>   {{ $identification->supervisor_name}}</td>
                                 </tr>
                                 <tr>
-                                    <td colspan="2">9.	Telephone number of Supervisor:  </td>
+                                    <td>9.	Telephone number of Supervisor:  </td>
                                     <td>   {{ $identification->supervisor_phone}}</td>
 
                                 </tr>
 
                                 <tr>
-                                    <td colspan="2">Number CNI Supervisor   </td>
+                                    <td>Number CNI Supervisor   </td>
                                     <td>   {{ $identification->number_cni_supervisor}}</td>
                                 </tr>
                                 <tr>
-                                    <td colspan="2">10.	Name and Surname of Cashier 1:  </td>
+                                    <td>10.	Name and Surname of Cashier 1:  </td>
                                     <td>   {{ $identification->cashier1_name}}</td>
                                 </tr>
                                 <tr>
-                                    <td colspan="2">11.	Cashier 1 Telephone Number  </td>
+                                    <td>11.	Cashier 1 Telephone Number  </td>
                                     <td>   {{ $identification->cashier1_phone}}</td>
                                 </tr>
 
                                 <tr>
-                                    <td colspan="2">CNI Cashier Number 1    </td>
+                                    <td>CNI Cashier Number 1    </td>
                                     <td>   {{ $identification->cni_cashier1}}</td>
                                 </tr>
                                 <tr>
-                                        <td colspan="2">12.	Name and Surname of Cashier 2:  </td>
+                                        <td>12.	Name and Surname of Cashier 2:  </td>
                                         <td>   {{ $identification->cashier2_name}}</td>
                                     </tr>
                                 <tr>
-                                        <td colspan="2">13.	Cashier 2 Telephone Number  </td>
+                                        <td>13.	Cashier 2 Telephone Number  </td>
                                         <td>   {{ $identification->cashier2_phone}}</td>
                                     </tr>
 
                                     <tr>
-                                        <td colspan="2">CNI Cashier Number 2    </td>
+                                        <td>CNI Cashier Number 2    </td>
                                         <td>   {{ $identification->cni_cashier1}}</td>
                                 </tr>
                                 <tr>
-                                        <td colspan="2">14.	Name and Surname of Cashier 3:  </td>
+                                        <td>14.	Name and Surname of Cashier 3:  </td>
                                         <td>   {{ $identification->cashier3_name}}</td>
                                 </tr>
                                 <tr>
-                                        <th colspan="2">15. Device Information  </th>
+                                        <th>15. Device Information  </th>
                                 </tr>
 
                                 <tr>
                                         <td>IMEI: {{ $identification->device_imei}}</td>
-                                    
-                                        <td colspan="2">Serial Number:
+
+                                        <td>Serial Number:
                                              {{ $identification->device_serial_no}} </td>
 
                                 </tr>
 
                                 <tr>
-                                        <td colspan="2">16.	Surface of the room:   </td>
+                                        <td>16.	Surface of the room:   </td>
                                         <td>   {{ $identification->surface_room}}</td>
                                 </tr>
                                 <tr>
-                                        <td colspan="2">17.	Type of products sold: </td>
+                                        <td>17.	Type of products sold: </td>
                                         <td>   {{ $identification->products_type}}</td>
                                 </tr>
                                 <tr>
-                                        <td colspan="2">18.	Core business:</td>
+                                        <td>18.	Core business:</td>
                                         <td>   {{ $identification->core_business}}</td>
                                 </tr>
                                 <tr>
-                                        <td colspan="2">19.	Secondary Activity (s): </td>
+                                        <td>19.	Secondary Activity (s): </td>
                                         <td>   {{ $identification->secondary_activity}}</td>
                                 </tr>
                                 <tr>
-                                        <td colspan="2">20.	Number of employees:  </td>
+                                        <td>20.	Number of employees:  </td>
                                         <td>   {{ $identification->employees_no}}</td>
                                 </tr>
 
                                 <tr>
-                                        <td colspan="2">21.	Waiting room:   </td>
+                                        <td>21.	Waiting room:   </td>
                                         <td>   {{ $identification->waiting_room == 1 ? 'YES': 'NO'}}</td>
                                 </tr>
                                 <tr>
-                                        <td colspan="2">22.	Computer equipment available on site </td>
+                                        <td>22.	Computer equipment available on site </td>
                                         <td>   {{ $identification->computer_available == 1 ? 'YES': 'NO'}}</td>
                                 </tr>
 
                                 <tr>
-                                        <td colspan="2">23.	InTouch Products / Services you want to market:   </td>
-                                        <td>   {{ $identification->services_to_market}}</td>
+                                        <td colspan="3">23.	InTouch Products / Services you want to market:   </td>
+                                          {{ $identification->services_to_market}}
                                 </tr>
                                 <tr>
                                         <th colspan="2">Touch Pad Payment</th>

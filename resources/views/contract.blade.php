@@ -28,7 +28,7 @@
                 <div class="card-body">
 
 
-                    <table class="table table-sm">
+                    <table class="table table-sm" style="margin-top:30px">
                             <tbody>
                                 <tr>
                                     <td>Name, First Name / Commercial Name: </td>
