@@ -9,7 +9,7 @@
     <title>Touch</title>
 
 </head>
-<body onload="window.print()">
+<body>
 
 <div class="">
     <div class="row justify-content-center">
@@ -17,7 +17,7 @@
 
 
             <div class="">
-                    <img src="/images/logo.jpg" height="70px">
+                 <img src="{{ public_path('/images/logo.jpg') }}" height="70px">
             </div>
 
             <div class="card">
@@ -93,7 +93,9 @@
                                 </tr>
                                 <tr>
                                     <td colspan="2">
-                                        <img src="/images/"{{ $contract->signature_url }} height="50px">
+                                        <img src="{{ public_path('/images/'. $contract->signature_url)}}" height="50px">
+
+
                                     </td>
                                 </tr>
                             </tbody>

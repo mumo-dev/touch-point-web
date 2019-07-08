@@ -8,15 +8,14 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Touch</title>
 </head>
-<body onload="window.print()">
-
+<body>
 <div class="">
     <div class="row justify-content-center">
         <div class="col-md-10">
 
 
             <div class="">
-                    <img src="/images/logo.jpg" height="70px">
+                    <img src="{{ public_path('/images/logo.jpg')}}" height="70px">
             </div>
 
             <div class="card">
@@ -31,9 +30,14 @@
                                 <tr>
                                     <td>1.	Name of Sale Agent: </td>
                                     <td>  {{ $identification->salesagent_name}}</td>
-                                    <td>Zone: </td>
+
+                                </tr>
+
+                                <tr>
+                                    <td>   Zone: </td>
                                     <td>  {{ $identification->salesagent_zone}}</td>
-                                    <td>Telephone: </td>
+
+                                    <td>   Telephone: </td>
                                     <td>  {{ $identification->salesagent_phone}}</td>
                                 </tr>
 
@@ -73,6 +77,10 @@
                                 <tr>
                                     <td colspan="2">9.	Telephone number of Supervisor:  </td>
                                     <td>   {{ $identification->supervisor_phone}}</td>
+
+                                </tr>
+
+                                <tr>
                                     <td colspan="2">Number CNI Supervisor   </td>
                                     <td>   {{ $identification->number_cni_supervisor}}</td>
                                 </tr>
@@ -83,6 +91,9 @@
                                 <tr>
                                     <td colspan="2">11.	Cashier 1 Telephone Number  </td>
                                     <td>   {{ $identification->cashier1_phone}}</td>
+                                </tr>
+
+                                <tr>
                                     <td colspan="2">CNI Cashier Number 1    </td>
                                     <td>   {{ $identification->cni_cashier1}}</td>
                                 </tr>
@@ -93,6 +104,9 @@
                                 <tr>
                                         <td colspan="2">13.	Cashier 2 Telephone Number  </td>
                                         <td>   {{ $identification->cashier2_phone}}</td>
+                                    </tr>
+
+                                    <tr>
                                         <td colspan="2">CNI Cashier Number 2    </td>
                                         <td>   {{ $identification->cni_cashier1}}</td>
                                 </tr>
@@ -105,10 +119,11 @@
                                 </tr>
 
                                 <tr>
-                                        <td>IMEI: </td>
-                                        <td>   {{ $identification->device_imei}}</td>
-                                        <td colspan="2">Serial Number:  </td>
-                                        <td>   {{ $identification->device_serial_no}}</td>
+                                        <td>IMEI: {{ $identification->device_imei}}</td>
+                                    
+                                        <td colspan="2">Serial Number:
+                                             {{ $identification->device_serial_no}} </td>
+
                                 </tr>
 
                                 <tr>
@@ -176,10 +191,10 @@
                                 </tr>
                                 <tr>
                                     <td>
-                                        <img src="/images/{{$identification->front_image_url}}" height="200px"/>
+                                        <img src="{{ public_path('/images/'.$identification->front_image_url)}}" height="200px"/>
                                     </td>
                                     <td>
-                                            <img src="/images/{{$identification->back_image_url}}" height="200px"/>
+                                       <img src="{{ public_path('/images/'.$identification->back_image_url)}}"  height="200px"/>
                                     </td>
                                 </tr>
                             </tbody>

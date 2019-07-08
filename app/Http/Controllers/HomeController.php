@@ -106,9 +106,9 @@ class HomeController extends Controller
            'identification'=>  $identification
         ];
         $pdf = PDF::loadView('identification', $data);
-        // return $pdf->download('touchpoint_identification.pdf');
+        return $pdf->download('touchpoint_identification_'.$identification->id.'.pdf');
 
-        return view('identification', compact('identification'));
+        // return view('identification', compact('identification'));
     }
 
 
@@ -119,7 +119,7 @@ class HomeController extends Controller
         $data['contract']= $contract;
 
         $pdf = PDF::loadView('contract', $data);
-        //  return $pdf->download('touchpoint_contract.pdf');
-        return view('contract', compact('contract'));
+         return $pdf->download('touchpoint_contract_'.$contract->id.'.pdf');
+        // return view('contract', compact('contract'));
     }
 }
