@@ -15,15 +15,15 @@ class CreateIdentificationsTable extends Migration
     {
         Schema::create('identifications', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('salesagent_name');
-            $table->string('salesagent_zone');
-            $table->string('salesagent_phone');
-            $table->string('pos_name');
-            $table->string('pos_address');
-            $table->string('owner_name');
-            $table->string('owner_phone');
-            $table->string('businesspermit_number');
-            $table->string('kra_pin');
+            $table->string('salesagent_name')->nullable();
+            $table->string('salesagent_zone')->nullable();
+            $table->string('salesagent_phone')->nullable();
+            $table->string('pos_name')->nullable();
+            $table->string('pos_address')->nullable();
+            $table->string('owner_name')->nullable();
+            $table->string('owner_phone')->nullable();
+            $table->string('businesspermit_number')->nullable();
+            $table->string('kra_pin')->nullable();
             $table->string('supervisor_name');
             $table->string('supervisor_phone');
             $table->string('number_cni_supervisor');
@@ -37,26 +37,26 @@ class CreateIdentificationsTable extends Migration
 
             $table->string('cashier3_name')->nullable();
 
-            $table->string('device_imei');
-            $table->string('device_serial_no');
+            $table->string('device_imei')->nullable();
+            $table->string('device_serial_no')->nullable();
 
-            $table->string('surface_room');
-            $table->string('products_type');
-            $table->string('core_business');
-            $table->string('secondary_activity');
+            $table->string('surface_room')->nullable();
+            $table->string('products_type')->nullable();
+            $table->string('core_business')->nullable();
+            $table->string('secondary_activity')->nullable();
 
-            $table->integer('employees_no');
-            $table->boolean('waiting_room');
-            $table->boolean('computer_available');
+            $table->integer('employees_no')->nullable();
+            $table->boolean('waiting_room')->nullable();
+            $table->boolean('computer_available')->nullable();
 
-            $table->string('services_to_market');
-            $table->string('payment_phone_number');
-            $table->string('payment_amount');
-            $table->string('payment_goods_refno');
+            $table->string('services_to_market')->nullable();
+            $table->string('payment_phone_number')->nullable();
+            $table->string('payment_amount')->nullable();;
+            $table->string('payment_goods_refno')->nullable();;
 
             $table->string('front_image_url')->nullable();
             $table->string('back_image_url')->nullable();
-            $table->string('topology_of_point');
+            $table->string('topology_of_point')->nullable();
 
 
             $table->unsignedBigInteger('user_id');

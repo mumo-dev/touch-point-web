@@ -91,13 +91,14 @@
                                  <th> Signature: </th>
 
                                 </tr>
-                                <tr>
-                                    <td colspan="2">
-                                        <img src="{{ public_path('/images/'. $contract->signature_url)}}" height="50px">
 
-
-                                    </td>
-                                </tr>
+                                @if($contract->signature_url)
+                                    <tr>
+                                        <td colspan="2">
+                                            <img src="{{ public_path('/images/'. $contract->signature_url)}}" height="50px">
+                                        </td>
+                                    </tr>
+                                @endif
                             </tbody>
                     </table>
 

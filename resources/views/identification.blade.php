@@ -193,14 +193,17 @@
                                         <th colspan="2"> Attachments: </th>
 
                                 </tr>
-                                <tr>
-                                    <td>
-                                        <img src="{{ public_path('/images/'.$identification->front_image_url)}}" height="200px"/>
-                                    </td>
-                                    <td>
-                                       <img src="{{ public_path('/images/'.$identification->back_image_url)}}"  height="200px"/>
-                                    </td>
-                                </tr>
+
+                                @if($identification->front_image_url != null)
+                                    <tr>
+                                        <td>
+                                            <img src="{{ public_path('/images/'.$identification->front_image_url)}}" height="200px"/>
+                                        </td>
+                                        <td>
+                                        <img src="{{ public_path('/images/'.$identification->back_image_url)}}"  height="200px"/>
+                                        </td>
+                                    </tr>
+                                @endif
                             </tbody>
                     </table>
 

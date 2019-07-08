@@ -88,7 +88,8 @@
 
                 <div class="content">
                 <div class="title m-b-md">
-                    Touch Limited
+                    Touch
+                    <img src="/images/logo.jpg" alt="LOGO">
                 </div>
 
                 {{-- <div class="links">
