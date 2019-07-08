@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'InTouch') }}</title>
+    <title>{{ config('app.name', 'Touch') }}</title>
 
     <!-- Scripts -->
 
@@ -23,7 +23,7 @@
      <link href="{{ asset('css/dataTables.bootstrap4.min.css') }}" rel="stylesheet">
 
      <style>
-         
+
         .logo-bg {
             background-image:url('/images/logo.jpg');
             background-repeat:no-repeat;
