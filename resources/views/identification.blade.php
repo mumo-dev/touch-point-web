@@ -25,7 +25,7 @@
                 <div class="card-body">
 
 
-                    <table class="table table-sm" style="margin-top:20px;">
+                    <table class="table table-sm" style="margin-top:30px;">
                             <tbody>
                                 <tr>
                                     <td>1.	Name of Sale Agent: </td>
