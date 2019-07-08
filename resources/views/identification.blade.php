@@ -158,8 +158,11 @@
                                 </tr>
 
                                 <tr>
-                                        <td colspan="3">23.	InTouch Products / Services you want to market:   </td>
-                                          {{ $identification->services_to_market}}
+                                    <td colspan="3">23.	InTouch Products / Services you want to market:   </td>
+
+                                </tr>
+                                <tr>
+                                    <td colspan="3"> {{ $identification->services_to_market}}</td>
                                 </tr>
                                 <tr>
                                         <th colspan="2">Touch Pad Payment</th>
