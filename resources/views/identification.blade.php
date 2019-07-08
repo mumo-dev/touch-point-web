@@ -23,7 +23,7 @@
             <div class="">
                     <img src="/images/logo.jpg" height="70px">
             </div>
-            
+
             <div class="card">
                 <div class="card-header">
                     Touch Point Identification
@@ -180,8 +180,11 @@
 
                                 </tr>
                                 <tr>
-                                    <td colspan="5">
-                                        <img src="/images/{{ $identification->image_url}}" height="200px"/>
+                                    <td>
+                                        <img src="/images/{{ $identification->front_image_url}}" height="200px"/>
+                                    </td>
+                                    <td>
+                                            <img src="/images/{{ $identification->back_image_url}}" height="200px"/>
                                     </td>
                                 </tr>
                             </tbody>
