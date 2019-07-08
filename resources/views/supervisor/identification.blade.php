@@ -75,7 +75,7 @@
                 <div class="card-header">
                     Touch Point Identifications
 
-                    <a class="btn btn-primary btn-sm float-right" href="/identification/download/{{$identification->id}}">Print</a>
+                    <a class="btn btn-primary btn-sm float-right" href="/identification/download/{{$identification->id}}">Download</a>
                 </div>
                 <div class="card-body">
 

@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Hash;
 use App\Identification;
 use App\Contract;
 use App\User;
+use PDF;
 
 class HomeController extends Controller
 {
@@ -17,7 +18,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        // $this->middleware('auth');
     }
 
     /**
@@ -100,6 +101,13 @@ class HomeController extends Controller
     public function identificationDownload($id)
     {
         $identification = Identification::findOrFail($id);
+
+        $data = [
+           'identification'=>  $identification
+        ];
+        $pdf = PDF::loadView('identification', $data);
+        // return $pdf->download('touchpoint-identification.pdf');
+
         return view('identification', compact('identification'));
     }
 
@@ -107,6 +115,11 @@ class HomeController extends Controller
     public function contractDownload($id)
     {
         $contract = Contract::findOrFail($id);
+
+        $data['contract']= $contract;
+
+        $pdf = PDF::loadView('contract', $data);
+        // return $pdf->download('touchpoint-contract.pdf');
         return view('contract', compact('contract'));
     }
 }

@@ -58,9 +58,9 @@ class IdentificationController extends Controller
         $contract->update(['signature_url'=>$imagename]);
 
         return response()->json([
+            'id'=> $request->id,
             'message'=>'successfully created'
         ]);
-
 
     }
 
@@ -112,29 +112,33 @@ class IdentificationController extends Controller
     public function storeIdentificationImage(Request $request)
     {
         $destinationPath = public_path('/images');
-        $image = $request->file('image');
-        $imagename = uniqid(). '.' . $image->getClientOriginalExtension();
+        $image1 = $request->file('front_image');
+        $imagename1 = uniqid(). '.' . $image1->getClientOriginalExtension();
+        $image1->move($destinationPath, $imagename1);
 
-        $image->move($destinationPath, $imagename);
+        $image2 = $request->file('back_image');
+        $imagename2 = uniqid(). '.' . $image2->getClientOriginalExtension();
+        $image2->move($destinationPath, $imagename2);
 
-        $identification =  Identification::find($request->id);
-        $identification->update(['image_url'=>$imagename]);
+        $identification = Identification::find($request->id);
+        $identification->update(['front_image_url'=>$imagename1, 'back_image_url'=>$imagename2]);
 
         return response()->json([
+            'id'=> $request->id,
             'message'=>'successfully created'
         ]);
     }
 
     public function getContracts($id)
     {
-       $contracts =  Contract::where('user_id', $id)->latest()->get();
-       return response()->json($contracts);
+       $contract =  Contract::find($id);
+       return response()->json($contract);
     }
 
 
     public function getIdentifications($id)
     {
-        $contracts =  Identification::where('user_id', $id)->latest()->get();
+        $contracts =  Identification::find($id);
         return response()->json($contracts);
     }
 

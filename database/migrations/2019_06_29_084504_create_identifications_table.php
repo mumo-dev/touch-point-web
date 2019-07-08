@@ -54,7 +54,8 @@ class CreateIdentificationsTable extends Migration
             $table->string('payment_amount');
             $table->string('payment_goods_refno');
 
-            $table->string('image_url')->nullable();
+            $table->string('front_image_url')->nullable();
+            $table->string('back_image_url')->nullable();
             $table->string('topology_of_point');
 
 

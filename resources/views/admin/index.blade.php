@@ -72,7 +72,7 @@
 
 
             <div class="list-group">
-                <a href="#" class="list-group-item list-group-item-action active">
+                <a href="#" class="list-group-item list-group-item-action active" style="background-color:#59BFC9; border:0;">
                     List of Submitted Identification forms
                 </a>
                 @forelse($identifications as $identification)

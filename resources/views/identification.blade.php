@@ -20,6 +20,10 @@
             @endif
 
 
+            <div class="">
+                    <img src="/images/logo.jpg" height="70px">
+            </div>
+            
             <div class="card">
                 <div class="card-header">
                     Touch Point Identification

@@ -7,18 +7,22 @@
 
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <title>InTouch</title>
+
 </head>
 <body onload="window.print()">
 
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-12">
                 @if (session('status'))
                 <div class="alert alert-success" role="alert">
                     {{ session('status') }}
                 </div>
             @endif
 
+            <div class="">
+                    <img src="/images/logo.jpg" height="70px">
+            </div>
 
             <div class="card">
                 <div class="card-header">
@@ -98,6 +102,8 @@
                                 </tr>
                             </tbody>
                     </table>
+
+
 
 
                 </div>

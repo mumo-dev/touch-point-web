@@ -64,7 +64,7 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-10">
                 @if (session('status'))
                 <div class="alert alert-success" role="alert">
                     {{ session('status') }}
@@ -77,9 +77,9 @@
                     TOUCH POINT LICENSE AGREEMENT FOR THE USE OF GUICHET UNIQUE LIMITED’S
                         MULTIMODAL PLATFORM
 
-                    <a class="btn btn-primary btn-sm float-right" href="/contract/download/{{$contract->id}}">Print</a>
+                    <a class="btn btn-primary btn-sm float-right" href="/contract/download/{{$contract->id}}">Download</a>
                 </div>
-                <div class="card-body">
+                <div class="card-body logo-bg" >
 
 
                     <table class="table table-sm">
@@ -90,7 +90,7 @@
 
                                 </tr>
 
-                            
+
 
                                 <tr>
                                     <td>Corporate name:  </td>
@@ -152,6 +152,8 @@
                                 </tr>
                             </tbody>
                     </table>
+
+
 
 
                 </div>

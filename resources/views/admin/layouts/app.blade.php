@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'InTouch') }}</title>
+    <title>{{ config('app.name', 'Touch') }}</title>
 
     <!-- Scripts -->
 
@@ -22,13 +22,23 @@
     <link href="{{ asset('css/dashboard.css') }}" rel="stylesheet">
 
     <link href="{{ asset('css/dataTables.bootstrap4.min.css') }}" rel="stylesheet">
+
+    <style>
+
+        .logo-bg {
+            background-image:url('/images/logo.jpg');
+            background-repeat:no-repeat;
+            background-position:center
+        }
+    </style>
 </head>
 <body>
     <div id="app">
 
 
-    <nav class="navbar navbar-dark fixed-top bg-primary flex-md-nowrap p-0 shadow" >
-      <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">InTouch
+    <nav class="navbar navbar-dark fixed-top  flex-md-nowrap p-0 shadow" style="background-color:#22305c">
+      <a class="navbar-brand col-sm-3 col-md-2 mr-0 pt-0 pb-0" href="#">
+            <img src="/images/logo.jpg" height="50px" class="rounded-circle"> Touch
       </a>
          @yield('header-title')
       {{-- <h6 class="text-white text-uppercase">Admin Dashboard</h6> --}}
