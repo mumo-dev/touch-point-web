@@ -9,9 +9,9 @@
     <title>Touch</title>
 
 </head>
-<body>
+<body onload="window.print()">
 
-<div class="container">
+<div class="">
     <div class="row justify-content-center">
         <div class="col-md-12">
 
@@ -93,14 +93,11 @@
                                 </tr>
                                 <tr>
                                     <td colspan="2">
-                                        <img src="/images/{{ $contract->signature_url}}" height="50px">
+                                        <img src="/images/"{{ $contract->signature_url }} height="50px">
                                     </td>
                                 </tr>
                             </tbody>
                     </table>
-
-
-
 
                 </div>
             </div>

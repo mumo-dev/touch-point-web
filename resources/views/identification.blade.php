@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Touch</title>
 </head>
-<body>
+<body onload="window.print()">
 
-<div class="container">
+<div class="">
     <div class="row justify-content-center">
         <div class="col-md-10">
 
@@ -176,10 +176,10 @@
                                 </tr>
                                 <tr>
                                     <td>
-                                        <img src="/images/{{ $identification->front_image_url}}" height="200px"/>
+                                        <img src="/images/{{$identification->front_image_url}}" height="200px"/>
                                     </td>
                                     <td>
-                                            <img src="/images/{{ $identification->back_image_url}}" height="200px"/>
+                                            <img src="/images/{{$identification->back_image_url}}" height="200px"/>
                                     </td>
                                 </tr>
                             </tbody>
