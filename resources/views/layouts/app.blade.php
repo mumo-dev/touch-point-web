@@ -24,7 +24,7 @@
         <nav class="navbar navbar-expand-md navbar-dark  shadow-sm" style="background-color:#22305c">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    <img src="/images/logo.jpg" height="50px" class="rounded-circle">  Touch
+                    <img src="/images/logo.jpg" height="50px" class="rounded-circle">  Touch Rahisi
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
