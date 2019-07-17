@@ -4,7 +4,7 @@
 Make sure you have composer, xampp and git installed in your machine
 Open Git Bash and copy and paste the following commands
 
-- git clone 
+- git clone https://github.com/mumo-dev/touch-point-web.git
 - composer update
 - cp .env.copy  .env
 - php artisan key:generate
