@@ -88,7 +88,7 @@
 
                 <div class="content">
                 <div class="title m-b-md">
-                    Touch
+                    Touch Rahisi
                     <img src="/images/logo.jpg" alt="LOGO">
                 </div>
 
