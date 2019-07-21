@@ -17,6 +17,7 @@ DB_PASSWORD=password
 
 Run the following commands from the root path of your application
    - php artisan migrate
+   - php artisan db:seed
    - php artisan serve
 
 The application should start at http://localhost:8000
